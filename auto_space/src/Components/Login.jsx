@@ -9,7 +9,7 @@ const Login = () => {
 
     axios({
       method: 'post',
-      url: '/addlogincode',
+      url: '/login',
       
       data: data
     })
