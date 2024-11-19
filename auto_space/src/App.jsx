@@ -18,6 +18,7 @@ import PM_view_review from './Components/PM_view_review';
 import PM_view_review2 from './Components/PM_view_review2';
 import Admin_Home from './Components/Admin_Home';
 import Admin_View_Notification from './Components/Admin_View_Notification';
+import Parking_Manager_Home from './Components/parking_manager_home';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -32,7 +33,15 @@ function App() {
           <Route exact path='/Admin_Verify_User' element={<Admin_Verify_User/>}/>
           <Route exact path='/Parking_Manager' element={<Parking_Manager/>}/>
           <Route exact path='/Admin_View_Notification' element={<Admin_View_Notification/>}/>
-          
+          <Route exact path='/Parking_Manager_Home' element={<Parking_Manager_Home/>}/>
+          <Route exact path='/PM_change_password' element={<PM_change_password/>}/>
+          <Route exact path='/PM_manage_parking_slot' element={<PM_manage_parking_slot/>}/>
+          <Route exact path='/PM_view_approve_slot_booking' element={<PM_view_approve_slot_booking/>}/>
+          <Route exact path='/PM_view_notification' element={<PM_view_notification/>}/>
+          <Route exact path='/PM_view_review' element={<PM_view_review/>}/>
+          <Route exact path='/PM_view_review2' element={<PM_view_review2/>}/>
+          <Route exact path='/PM_add_slot_no' element={<PM_add_slot_no/>}/>
+
         </Routes>
       </Router>
     </>

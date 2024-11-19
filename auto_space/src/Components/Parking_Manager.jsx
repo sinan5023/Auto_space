@@ -1,11 +1,28 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
 const Parking_Manager = () => {
   const { register, handleSubmit, formState: { errors }, } = useForm(); 
 
   const onSub=(data)=>{
-    console.log(data)
-  }
+ 
+  axios({
+    method: 'post',
+    url: 'http://localhost:5000/Parking_Manager',
+    data: data
+  })
+    .then((response) => {
+        console.log(response)
+      
+      const res = response.data;
+      console.log(res.status)
+      alert(res.message)})
+
+      
+      console.log(data)
+
+    }
 
   return (
     <>
@@ -63,7 +80,9 @@ const Parking_Manager = () => {
     </tr>
     <tr>
       <td>PHOTO</td>
-      <td><input type='file' ></input>
+      <td><input type='file' {...register("image", {required: "image is required",
+            })} ></input>
+    {errors.cnumber && (<small className="text-danger">{errors.cnumber.message}</small>)}
       </td>
     </tr>
     <tr>

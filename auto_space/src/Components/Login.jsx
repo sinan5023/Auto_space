@@ -9,7 +9,7 @@ const Login = () => {
 
     axios({
       method: 'post',
-      url: '/login',
+      url: 'http://localhost:5000/login',
       
       data: data
     })
@@ -25,12 +25,12 @@ const Login = () => {
               console.log("qwertyu")
               
               sessionStorage.setItem('uid', res.uid);
-  window.location='/';
+  window.location='/admin';
               }
               else{
                 console.log("qwertyu")
                   sessionStorage.setItem('uid', res.uid);
-      window.location='/UserHome';
+      window.location='/Parking_Manager_Home';
   
               }
             }
@@ -75,10 +75,6 @@ const Login = () => {
       <td><label>
         <input type="submit" name="login" value="login" />
       </label></td>
-    </tr>
-    <tr>
-      <td><a href="Parking_Manager">PM Registration</a></td>
-      <td>&nbsp;</td>
     </tr>
   </table>
 </form>

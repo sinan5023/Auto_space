@@ -1,9 +1,7 @@
-const Mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
 const ParkingManagerSchema = new mongoose.Schema({
  
-    username: String,
-    password: String,
     place:String,
     pin:String,
    phnumber:String,
